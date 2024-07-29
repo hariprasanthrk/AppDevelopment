@@ -1,0 +1,85 @@
+/* src/components/Navbar.css */
+
+.navbar {
+    width: 100%;
+    height: 90px;
+    top: 0;
+    left: 0;
+    background-color: #c8bada;
+    border-bottom: 1px solid #a670d6;
+  }
+  
+  .navbar .container {
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+  }
+  
+  .navbar-logo {
+    height: 40px; /* Adjust the size of the logo */
+    width: auto;
+  }
+  
+  .navbar-title {
+    color: #5651e5;
+    font-size: 1.5rem;
+    margin-left: 1rem;
+    flex-grow: 1;
+    text-align: left;
+  }
+  
+  .nav-menu {
+    display: flex;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+  
+  .nav-menu li {
+    padding: 1rem;
+  }
+  
+  .nav-menu a {
+    text-decoration: none;
+    color: #5651e5;
+  }
+  
+  .hamburger {
+    display: none;
+  }
+  
+  .icon {
+    font-size: 1.5rem;
+    cursor: pointer;
+  }
+  
+  @media screen and (max-width: 940px) {
+    .hamburger {
+      display: block;
+    }
+  
+    .nav-menu {
+      position: absolute;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      top: 90px;
+      right: -100%;
+      height: 100%;
+      width: 100%;
+      background: rgba(122, 119, 188, 0.98);
+      transition: 0.4s ease-in-out;
+      z-index: 10;
+    }
+  
+    .nav-menu.active {
+      right: 0;
+    }
+  
+    .nav-menu li a {
+      font-size: 2rem;
+    }
+  }
+  
